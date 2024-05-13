@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>FastDelegate</id>
+        <version>0.0.0.1</version>        
+        <developmentDependency>true</developmentDependency>           
+        <description>desc</description>
+        <authors>floatW0lf</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <dependencies>
+            <group targetFramework="net7.0" />
+        </dependencies>
+    </metadata>   
+    <files>        
+        <file src=".\bin\Release\net7.0\FastDelegate.dll" target="tools/net7.0"/>
+        <file src="..\FastDelegate.Rewriter\bin\Release\net7.0\FastDelegate.Rewriter.dll" target="tools/net7.0"/>
+        <file src="..\FastDelegate.Rewriter\bin\Release\net7.0\Mono.Cecil*.dll" target="tools/net7.0"/>        
+        <file src="..\FastDelegate.Attributes\bin\Release\net7.0\FastDelegate.Attributes.dll" target="tools/net7.0"/>
+        <file src="..\FastDelegate.Attributes\bin\Release\net7.0\FastDelegate.Attributes.dll" target="lib/net7.0" />
+        <file src="FastDelegate.targets" target="build" />
+    </files>
+</package>

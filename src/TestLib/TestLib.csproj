@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>11</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <UsePackage>false</UsePackage>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Condition="$(UsePackage) == true" Include="FastDelegate" Version="0.0.0.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Condition="$(UsePackage) == false" Include="..\FastDelegate.Attributes\FastDelegate.Attributes.csproj" />
+    </ItemGroup>   
+</Project>

@@ -1,0 +1,10 @@
+<Project>
+    <PropertyGroup>        
+        <FastDelegatePath Condition="$(FastDelegatePath) == ''">$(MSBuildThisFileDirectory)..\</FastDelegatePath>             
+        <FastDelegateAssembly Condition="$(FastDelegateAssembly) == ''">$(FastDelegatePath)tools\net7.0\FastDelegate.dll</FastDelegateAssembly>     
+    </PropertyGroup>
+    <UsingTask TaskName="LambdaRewriterTask" AssemblyFile="$(FastDelegateAssembly)" />
+    <Target Name="Rewrite" AfterTargets="AfterBuild">
+        <LambdaRewriterTask AssemblyFile="$(TargetPath)" />
+    </Target>
+</Project>
